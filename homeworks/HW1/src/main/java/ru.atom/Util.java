@@ -1,5 +1,7 @@
 package ru.atom;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 /**
  * In this assignment you need to implement the following util methods.
  * Note:
@@ -16,7 +18,13 @@ public class Util {
      * @return the largest of values.
      */
     public static int max(int[] values) {
-        throw new UnsupportedOperationException();
+        int max = values[0];
+        for (int i = 0; i < values.length; i++) {
+            if (max < values[i]) {
+                max = values[i];
+            }
+        }
+        return max;
     }
 
     /**
@@ -26,7 +34,11 @@ public class Util {
      * @return the sum of all values.
      */
     public static long sum(int[] values) {
-        throw new UnsupportedOperationException();
+        long sum = 0;
+        for (int i = 0; i < values.length; i++) {
+            sum += values[i];
+        }
+        return sum;
     }
 
 
